@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search</title>
+</head>
+
+<body>
+    <nav class="header-back">
+        <a href="index.html" class="header-item">Back</a>
+    </nav>
+    <main class="mycontainer">
+        <h1>Advanced Search</h1>
+        <h2>find search with...</h2>
+        <form action="https://google.com/search" id="advancedsearch" method="GET">
+
+            <div class="row">
+                <label for="q">all these words:</label>
+                <input autocomplete="off" type="text" name="as_q" id="q">
+            </div>
+            <div class="row">
+                <label for="epq">this exact word or phrase:</label>
+                <input autocomplete="off" type="text" name="as_epq" id="epq">
+            </div>
+            <div class="row">
+                <label for="oq">any of these words:</label>
+                <input autocomplete="off" type="text" name="as_oq" id="oq">
+            </div>
+            <div class="row">
+                <label for="eq">none of these words</label>
+                <input autocomplete="off" type="text" name="as_eq" id="eq">
+            </div>
+            <div class="row">
+                <label for=""></label>
+                <div>
+                    <input type="submit" value="Advanced search">
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

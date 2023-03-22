@@ -1,0 +1,237 @@
+$ffamily: Helvetica, Arial, sans-serif;
+$ahsize: 22px;
+$lgsize: 38px;
+$msize: 28px;
+$smsize: 22px;
+$ssmsize: 16px;
+$googlered: #d93025;
+$fcolor: #222;
+$flightcolor: #444;
+$flightercolor: #bdc1c6;
+$inlinemarg: 0 8px;
+$lightmarg: 4px;
+$hpadd: 10px 30px;
+$padding-x: 20px;
+$padding-y: 20px;
+$padding-field: 0 16px;
+$radius: 4px;
+$radiuslg: 24px;
+$border: 1px solid #303134;
+$min-height: 30px;
+$shadow: 0px -5px 8px #333;
+
+%border {
+    border: $border;
+    border-radius: $radius;
+}
+
+%flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+%fontandcolor {
+    font-family: $ffamily;
+    color: $fcolor;
+}
+
+body {
+    margin: 0;
+}
+
+
+main {
+    margin-top: 20px;
+    h1{
+        color: $googlered;
+    }
+}
+
+h1 {
+    @extend %fontandcolor;
+    font-size: $lgsize;
+}
+
+h2 {
+    @extend %fontandcolor;
+    font-size: $msize;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    @extend %fontandcolor;
+    font-size: $smsize;
+}
+
+p,
+label,
+a {
+    @extend %fontandcolor;
+    font-size: $ssmsize;
+}
+
+%header {
+    @extend %flex;
+    justify-content: flex-end;
+    padding: $hpadd;
+    box-shadow: $shadow;
+    min-height: 20px;
+
+    a {
+        color: $googlered;
+        font-size: $ahsize;
+        margin: $inlinemarg;
+        text-decoration: none;
+    }
+}
+
+.header {
+    @extend %header;
+    flex-direction: row;
+}
+
+.header-back {
+    @extend %header;
+    flex-direction: row-reverse;
+}
+
+input {
+    @extend %fontandcolor;
+    font-size: $ssmsize;
+    padding: $padding-field;
+    min-height: $min-height;
+}
+
+.searchtitle {
+    @extend %fontandcolor;
+    display: inline-block;
+    font-size: $msize;
+    margin-bottom: $lightmarg;
+}
+
+.mycontainer {
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 767px) {
+    .inline {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    #searchbar {
+        input:not([type=submit]) {
+            width: 180px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .mycontainer {
+        width: 750px;
+    }
+
+    #searchbar {
+        input:not([type=submit]) {
+            width: 200px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .mycontainer {
+        width: 970px;
+    }
+
+    #searchbar {
+        input:not([type=submit]) {
+            width: 350px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .mycontainer {
+        width: 1170px;
+    }
+
+    #searchbar {
+        input:not([type=submit]) {
+            width: 460px;
+        }
+    }
+}
+
+%button {
+    input[type=submit] {
+        margin-top: $lightmarg;
+        background-color: #2b72e3;
+        border: 1px solid #3079ed;
+        color: #fff;
+    }
+
+    input[type=submit]:hover {
+        background-color: #6ca1f8;
+
+    }
+}
+
+#searchbar {
+    // For normal and image search design
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input:not([type=submit]) {
+        border: $border;
+        border-radius: $radiuslg;
+    }
+
+    @extend %button;
+}
+
+#advancedsearch {
+    display: grid;
+    grid-row-gap: 10px;
+
+    input:not([type=submit]) {
+        border: $border;
+    }
+
+    @extend %button;
+
+    input[type=submit] {
+        float: right;
+    }
+}
+
+.row {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: 200px 220px auto;
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    @extend %border;
+    padding: $padding-field;
+}
+
+[type=button]:enabled,
+[type=reset]:enabled,
+[type=submit]:enabled,
+button:enabled {
+    cursor: pointer;
+}
+
+.inline {
+    margin: $inlinemarg;
+}

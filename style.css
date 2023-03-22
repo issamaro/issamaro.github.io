@@ -1,0 +1,186 @@
+[type=button],
+[type=reset],
+[type=submit],
+button {
+  border: 1px solid #303134;
+  border-radius: 4px;
+}
+
+.header-back, .header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchtitle, input, p,
+label,
+a, h3,
+h4,
+h5,
+h6, h2, h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #222;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin-top: 20px;
+}
+main h1 {
+  color: #d93025;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 22px;
+}
+
+p,
+label,
+a {
+  font-size: 16px;
+}
+
+.header-back, .header {
+  justify-content: flex-end;
+  padding: 10px 30px;
+  box-shadow: 0px -5px 8px #333;
+  min-height: 20px;
+}
+.header-back a, .header a {
+  color: #d93025;
+  font-size: 22px;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.header {
+  flex-direction: row;
+}
+
+.header-back {
+  flex-direction: row-reverse;
+}
+
+input {
+  font-size: 16px;
+  padding: 0 16px;
+  min-height: 30px;
+}
+
+.searchtitle {
+  display: inline-block;
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.mycontainer {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 767px) {
+  .inline {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  #searchbar input:not([type=submit]) {
+    width: 180px;
+  }
+}
+@media (min-width: 768px) {
+  .mycontainer {
+    width: 750px;
+  }
+  #searchbar input:not([type=submit]) {
+    width: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .mycontainer {
+    width: 970px;
+  }
+  #searchbar input:not([type=submit]) {
+    width: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  .mycontainer {
+    width: 1170px;
+  }
+  #searchbar input:not([type=submit]) {
+    width: 460px;
+  }
+}
+#advancedsearch input[type=submit], #searchbar input[type=submit] {
+  margin-top: 4px;
+  background-color: #2b72e3;
+  border: 1px solid #3079ed;
+  color: #fff;
+}
+#advancedsearch input[type=submit]:hover, #searchbar input[type=submit]:hover {
+  background-color: #6ca1f8;
+}
+
+#searchbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#searchbar input:not([type=submit]) {
+  border: 1px solid #303134;
+  border-radius: 24px;
+}
+
+#advancedsearch {
+  display: grid;
+  grid-row-gap: 10px;
+}
+#advancedsearch input:not([type=submit]) {
+  border: 1px solid #303134;
+}
+#advancedsearch input[type=submit] {
+  float: right;
+}
+
+.row {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: 200px 220px auto;
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+  padding: 0 16px;
+}
+
+[type=button]:enabled,
+[type=reset]:enabled,
+[type=submit]:enabled,
+button:enabled {
+  cursor: pointer;
+}
+
+.inline {
+  margin: 0 8px;
+}
+
+/*# sourceMappingURL=style.css.map */
